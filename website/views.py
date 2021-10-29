@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, session, request
 from website import app
 from website.serverless_functions import *
-from config import TOKEN
+from website.config import TOKEN
 
 key = TOKEN
 
