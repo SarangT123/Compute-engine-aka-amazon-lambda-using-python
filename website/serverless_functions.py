@@ -1,6 +1,4 @@
-def ping():
+def ping(): # do not remove this function
     return 'pong'
 
 
-def add(a, b):
-    return str(int(a)+int(b))

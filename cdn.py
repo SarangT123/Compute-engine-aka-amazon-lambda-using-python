@@ -1,4 +1,6 @@
 from sys import argv as args
+import os
+from website.config import EDITOR
 import subprocess as sp
 
 if args[1] in ['add', '-a', 'a', 'make', '-m'] and len(args) > 3:
@@ -15,5 +17,4 @@ elif args[1] in ['help', '-h', 'h', 'commands', 'c', '-c']:
     Example : python3 cdn.py add sum a,b sumcode.py""")
 
 elif args[1] in ['edit']:
-    import os
-    os.system("./editor.sh")
+    os.system(f"gnome-terminal --execute bash -c '{EDITOR} website/serverless_functions.py'")

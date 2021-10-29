@@ -1,0 +1,1 @@
+return str(int(a)+int(b))

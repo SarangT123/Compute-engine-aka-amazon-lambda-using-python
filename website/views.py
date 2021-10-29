@@ -1,8 +1,9 @@
 from flask import render_template, url_for, flash, redirect, session, request
 from website import app
 from website.serverless_functions import *
+from config import TOKEN
 
-key = "Put ur token"
+key = TOKEN
 
 
 @app.route('/<token>')
@@ -16,7 +17,7 @@ def ping_server(token):
 
 @app.route('/run/<func>/<token>')
 @app.route('/run/<func>/<token>/<args>')
-def ping_server_main(token, func="ping", args=[]):
+def cust_funcs(token, func="ping", args=[]):
     if key == token:
         try:
             print(type(args))
